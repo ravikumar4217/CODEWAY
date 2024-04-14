@@ -1,0 +1,155 @@
+#HTML CODE
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ravi Kumar - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Chinta Rav kumar</h1>
+            <p>Web Developer</p>
+        </div>
+    </header>
+    <section id="about">
+        <div class="container">
+            <img src="C:\Users\mavur\Documents\profile.jpeg" alt="Chinta Rav kumar">
+            <h2>About Me</h2>
+            <b><p>A passionate web developer with experience in HTML, CSS, and JavaScript. I love creating interactive and visually appealing websites.</p></b>
+        </div>
+    </section>
+    <section id="skills">
+        <div class="container">
+            <h2>Skills</h2>
+           <ul>
+  <li>HTML5</li>
+                  <li>CSS3</li>
+   <li>JavaScript</li>
+  </ul>  
+        </div>
+    </section>
+    <section id="Projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>1.Coding Challenge Sign in/Sign up Form</h3>
+               <p>This is a basic login form with fields for Email and password, designed for user authentication.</p>
+                <img src="C:\Users\mavur\Documents\codingchallenge.jpg" alt="Coding Challenge Login/Sign up Form">
+            </div>
+            <div class="project">
+                <h3>2.Weight Converter</h3>
+                <p>The weight converter helps you convert between Pounds,Ounces and Grams.</p>
+                <img src="C:\Users\mavur\Documents\wtconverter.png" alt="Weight Converter">
+            </div>
+        </div>
+    </section>
+    <section id="resume">
+        <div class="container">
+            <h2>Resume</h2>
+            <a href="C:\Users\mavur\Documents\MyResume.png" target="_blank">Download my resume here</a>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>Email: chintharavikumar9908@gmail.com</p>
+            <p>Phone: 9866612874</p>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Chinta Rav kumar. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+
+#CSS CODE
+
+ body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color:rgb(173, 216, 230);
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+.container {
+
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px 0;
+
+}
+
+header h1 {
+  margin: 0;
+}
+
+#about1 {
+  text-align: center;
+  padding: 1px 0;
+}
+#about {
+  text-align: center;
+  padding: 20px 0;
+}
+
+#about img {
+  width: 200px;
+  border-radius: 60%;
+}
+
+#skills {
+  text-align: center;
+  padding: 10px 0;
+}
+
+#skills ul {
+  list-style: none;
+}
+
+#projects {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.project {
+  margin-bottom: 20px;
+}
+
+.project img {
+  max-width: 70%;
+  border-radius: 15 px;
+}
+
+#resume,
+#contact {
+  text-align: center;
+  padding: 20px 0;
+}
+
+#resume a {
+  text-decoration: none;
+  color: #333;
+  border: 1px solid #333;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
