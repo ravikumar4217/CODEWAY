@@ -1,0 +1,148 @@
+#HTML CODE
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Basic Calculator</title>
+<link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+<div class="calculator">
+  <div class="calculator-screen" id="display">0</div>
+  <div class="calculator-grid">
+    <button class="calculator-button" onclick="appendToDisplay('7')">7</button>
+    <button class="calculator-button" onclick="appendToDisplay('8')">8</button>
+    <button class="calculator-button" onclick="appendToDisplay('9')">9</button>
+    <button class="calculator-button" onclick="appendToDisplay('/')">/</button>
+    <button class="calculator-button" onclick="appendToDisplay('4')">4</button>
+    <button class="calculator-button" onclick="appendToDisplay('5')">5</button>
+    <button class="calculator-button" onclick="appendToDisplay('6')">6</button>
+    <button class="calculator-button" onclick="appendToDisplay('*')">*</button>
+    <button class="calculator-button" onclick="appendToDisplay('1')">1</button>
+    <button class="calculator-button" onclick="appendToDisplay('2')">2</button>
+    <button class="calculator-button" onclick="appendToDisplay('3')">3</button>
+    <button class="calculator-button" onclick="appendToDisplay('-')">-</button>
+    <button class="calculator-button" onclick="appendToDisplay('0')">0</button>
+    <button class="calculator-button" onclick="clearDisplay()">C</button>
+    <button class="calculator-button" onclick="calculate()">=</button>
+    <button class="calculator-button" onclick="appendToDisplay('+')">+</button>
+  </div>
+  <br>
+ <div class = "username">
+   <b>Designed By Ravi Kumar</b>
+ </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
+#CSS CODE
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.calculator {
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.calculator-screen {
+  width: 94%;
+  height: 50px;
+  font-size: 24px;
+  text-align: right;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.calculator-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.calculator-button {
+  padding: 10px;
+  font-size: 20px;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #4caf50;
+  color: #fff;
+}
+.username {
+ padding: 5px;
+  font-size: 20px;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #00BFFF;
+  color: #000000;
+}
+.calculator-button:hover {
+  background-color: #45a049;
+}
+
+.user-box {
+  margin-top: 20px;
+}
+
+.user-box label {
+  font-weight: bold;
+}
+
+.user-box input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+
+#JS CODE
+
+let display = document.getElementById('display');
+let userName = '';
+
+function appendToDisplay(value) {
+  if (display.textContent === '0' && value !== '.') {
+    display.textContent = '';
+  }
+  display.textContent += value;
+}
+
+function clearDisplay() {
+  display.textContent = '0';
+}
+
+function calculate() {
+  try {
+    display.textContent = eval(display.textContent);
+  } catch (error) {
+    display.textContent = 'Error';
+  }
+}
+
+function updateName(name) {
+  userName = name;
+  console.log('User Name:', userName);
+}
